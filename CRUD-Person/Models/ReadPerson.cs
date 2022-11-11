@@ -53,7 +53,7 @@ namespace CRUD_Person.Models
                 using (var dbContext = new PersonDbContext())
                 {
                     var queryString = dbContext.Person.FromSqlRaw($"SELECT Id,FirstName, LastName, Email, PhoneNr FROM Person").ToList();
-                    Console.WriteLine($"Numer of persons registered in PersonDB: {queryString.Count()}");
+                    Console.WriteLine($"Number of persons registered in PersonDB: {queryString.Count()}");
                     Console.WriteLine("------------------------------");
                     Console.WriteLine("Person details: ");
                     Console.WriteLine();
