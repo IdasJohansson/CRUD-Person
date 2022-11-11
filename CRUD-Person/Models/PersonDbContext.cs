@@ -15,7 +15,7 @@ namespace CRUD_Person.Models
         static string server = "localhost";
         static string database = "PersonDB";
         static string userId = "sa";
-        static string password = "P@ssw0rd"; 
+        static string password = "P@ssw0rd";
 
         string connString = $"Server={server};Database={database};User Id={userId};Password={password};";
 
