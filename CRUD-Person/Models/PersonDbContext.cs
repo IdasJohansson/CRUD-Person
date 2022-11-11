@@ -12,7 +12,12 @@ namespace CRUD_Person.Models
    
         public DbSet<Person> Person { get; set; }
 
-        string connString = "String is supposed to be hidden";
+        static string server = "localhost";
+        static string database = "PersonDB";
+        static string userId = "sa";
+        static string password = "P@ssw0rd"; 
+
+        string connString = $"Server={server};Database={database};User Id={userId};Password={password};";
 
         // In the OnConfiguring() method, an instance of DbContextOptionsBuilder is used to specify which database to use. 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
