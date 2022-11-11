@@ -66,7 +66,9 @@ namespace CRUD_Person.Models
                         Console.WriteLine($"Email: {person.Email}");
                         Console.WriteLine($"Phone Number: {person.PhoneNr}");
                         Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.DarkGray; 
                         Console.WriteLine("********************************");
+                        Console.ResetColor();
                         Console.WriteLine();
                     }
                 }

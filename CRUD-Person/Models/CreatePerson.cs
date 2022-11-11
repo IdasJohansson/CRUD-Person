@@ -12,7 +12,7 @@ namespace CRUD_Person.Models
 
         public void Create(Person person)
         {
-            // using Sqlquery
+            // Using Sqlquery
             try
             {
             Console.WriteLine("Insert an Id");
@@ -41,11 +41,8 @@ namespace CRUD_Person.Models
             }
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.DarkGreen; 
-                Console.WriteLine("Person created!");
-                Console.WriteLine("Press a key to return to Menu :)");
+                Console.WriteLine("Person was successfully created!");
                 Console.ResetColor();
-                Console.ReadKey();
-                Console.Clear();
             }
             catch (Exception e)
             {
@@ -54,6 +51,10 @@ namespace CRUD_Person.Models
                 Console.WriteLine("Something went wrong when creating a new Person. Please try again");
                 Console.ResetColor(); 
             }
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("Press a key to return to Menu");
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //public void Create(Person person)

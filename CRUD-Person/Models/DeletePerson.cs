@@ -6,7 +6,7 @@ namespace CRUD_Person.Models
 {
     public class DeletePerson : IDeletePerson
     {
-
+        // Using Sql query
         public void Delete()
         {
             try
@@ -21,8 +21,10 @@ namespace CRUD_Person.Models
             }
             catch (Exception e)
             {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine(e.Message);
                 Console.WriteLine("Something went wrong when deleting this Person, please try again");
+                Console.ResetColor();
             }
             Console.WriteLine();
             Console.WriteLine("------------------------------");
