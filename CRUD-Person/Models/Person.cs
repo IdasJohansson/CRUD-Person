@@ -4,10 +4,41 @@ namespace CRUD_Person.Models
     public class Person
     {
         private int Id;
-        public string FirstName { get; set;}
-        public string LastName { get; set;}
-        public string Email { get; set; }
-        public int PhoneNr { get; set; }
+        private string FirstName;
+        private string LastName;
+        private string Email;
+        private int PhoneNr; 
+
+        // Best practise att ha properties private
+        public int id
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+
+        public string firstName
+        {
+            get { return FirstName; }
+            set { FirstName = value; }
+        }
+
+        public string lastName
+        {
+            get { return LastName; }
+            set { LastName = value; }
+        }
+
+        public string email
+        {
+            get { return Email; }
+            set { Email = value; }
+        }
+
+        public int phoneNr
+        {
+            get { return PhoneNr;}
+            set { PhoneNr = value;}
+        }
 
         public Person()
         {
@@ -23,12 +54,7 @@ namespace CRUD_Person.Models
             phoneNr = this.PhoneNr;
         }
 
-        // Best practise att ha private Id och private properti
-        public int id
-        {
-            get { return Id; }
-            set { Id = value; }
-        }
+ 
     }
 }
 

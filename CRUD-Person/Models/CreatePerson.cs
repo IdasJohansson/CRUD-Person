@@ -29,10 +29,10 @@ namespace CRUD_Person.Models
             Person newPerson = new Person()
             {
                 id = id,
-                FirstName = firstName,
-                LastName = lastName,
-                Email = email,
-                PhoneNr = phoneNr
+                firstName = firstName,
+                lastName = lastName,
+                email = email,
+                phoneNr = phoneNr
             };
 
             using (var dbContext = new PersonDbContext())
