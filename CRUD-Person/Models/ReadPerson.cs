@@ -25,10 +25,10 @@ namespace CRUD_Person.Models
                     foreach (var person in queryString)
                     {
                         Console.WriteLine($"Id: {person.id}");
-                        Console.WriteLine($"First Name: {person.FirstName}");
-                        Console.WriteLine($"Last Name: {person.LastName}");
-                        Console.WriteLine($"Email: {person.Email}");
-                        Console.WriteLine($"Phone Number: {person.PhoneNr}");
+                        Console.WriteLine($"First Name: {person.firstName}");
+                        Console.WriteLine($"Last Name: {person.lastName}");
+                        Console.WriteLine($"Email: {person.email}");
+                        Console.WriteLine($"Phone Number: {person.phoneNr}");
                     }
                 }
             }
@@ -61,10 +61,10 @@ namespace CRUD_Person.Models
                     foreach (var person in queryString)
                     {
                         Console.WriteLine($"Id: {person.id}");
-                        Console.WriteLine($"First Name: {person.FirstName}");
-                        Console.WriteLine($"Last Name: {person.LastName}");
-                        Console.WriteLine($"Email: {person.Email}");
-                        Console.WriteLine($"Phone Number: {person.PhoneNr}");
+                        Console.WriteLine($"First Name: {person.firstName}");
+                        Console.WriteLine($"Last Name: {person.lastName}");
+                        Console.WriteLine($"Email: {person.email}");
+                        Console.WriteLine($"Phone Number: {person.phoneNr}");
                         Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.DarkGray; 
                         Console.WriteLine("********************************");
