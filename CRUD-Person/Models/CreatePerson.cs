@@ -15,7 +15,7 @@ namespace CRUD_Person.Models
             // Using Sqlquery
             try
             {
-            Console.WriteLine("Insert an Id");
+            Console.WriteLine("Insert an Id:");
             int id = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Insert your First name:");
             string firstName = Console.ReadLine();
@@ -28,7 +28,7 @@ namespace CRUD_Person.Models
 
             Person newPerson = new Person()
             {
-                Id = id,
+                id = id,
                 FirstName = firstName,
                 LastName = lastName,
                 Email = email,

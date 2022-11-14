@@ -36,7 +36,7 @@ namespace CRUD_Person
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.WriteLine($"\n ██████╗██████╗ ██╗   ██╗██████╗ \n██╔════╝██╔══██╗██║   ██║██╔══██╗\n██║     ██████╔╝██║   ██║██║  ██║\n██║     ██╔══██╗██║   ██║██║  ██║\n╚██████╗██║  ██║╚██████╔╝██████╔╝\n ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ \n                                 \n");
                 Console.ResetColor();
-                Console.WriteLine("Hello World! Lets CRUD a Person connected to PersonDB");
+                Console.WriteLine("Hello World! Lets CRUD a Person connected to PersonDB.");
                 Console.WriteLine("What do you want to do? Press one of below numbers to proceed:");
                 Console.WriteLine();
                 Console.WriteLine("1: Add new Person to DB");

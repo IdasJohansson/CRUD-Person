@@ -3,7 +3,7 @@ namespace CRUD_Person.Models
 {
     public class Person
     {
-        public int Id { get; set;}
+        private int Id;
         public string FirstName { get; set;}
         public string LastName { get; set;}
         public string Email { get; set; }
@@ -20,9 +20,15 @@ namespace CRUD_Person.Models
             firstName = this.FirstName;
             lastName = this.LastName;
             email = this.Email;
-            phoneNr = this.PhoneNr; 
+            phoneNr = this.PhoneNr;
         }
-        
+
+        // Best practise att ha private Id och private properti
+        public int id
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
     }
 }
 

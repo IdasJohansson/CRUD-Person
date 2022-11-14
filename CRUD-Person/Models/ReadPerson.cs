@@ -24,7 +24,7 @@ namespace CRUD_Person.Models
 
                     foreach (var person in queryString)
                     {
-                        Console.WriteLine($"Id: {person.Id}");
+                        Console.WriteLine($"Id: {person.id}");
                         Console.WriteLine($"First Name: {person.FirstName}");
                         Console.WriteLine($"Last Name: {person.LastName}");
                         Console.WriteLine($"Email: {person.Email}");
@@ -60,7 +60,7 @@ namespace CRUD_Person.Models
 
                     foreach (var person in queryString)
                     {
-                        Console.WriteLine($"Id: {person.Id}");
+                        Console.WriteLine($"Id: {person.id}");
                         Console.WriteLine($"First Name: {person.FirstName}");
                         Console.WriteLine($"Last Name: {person.LastName}");
                         Console.WriteLine($"Email: {person.Email}");
