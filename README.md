@@ -2,6 +2,10 @@
 
 Basic console application, testing CRUD operations connected to a local DB.
 
+School assignment: 
+
+<img width="576" alt="image" src="https://user-images.githubusercontent.com/89834477/201905571-699a8edc-38bf-4b17-8069-eb5abae731f0.png">
+
 ![crud](https://user-images.githubusercontent.com/89834477/201380316-661a6213-2b02-47ba-bb0d-553e13bc719a.png)
 
 ![image](https://user-images.githubusercontent.com/89834477/201381207-2df13964-75c0-4d08-a629-d2772928c902.png)
