@@ -18,9 +18,23 @@ namespace CRUD_Person.Models
                 Console.Clear();
                 using (var dbContext = new PersonDbContext())
                 {
-                    Console.WriteLine("Person details: ");
-                    Console.WriteLine();
                     var queryString = dbContext.Person.FromSqlRaw($"SELECT Id,FirstName, LastName, Email, PhoneNr FROM Person where Id = {id}").ToList();
+
+                    // If statement check if th
+                    if (queryString.Count == 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("********************************");
+                        Console.WriteLine($"Person with id: {id} does not exist in PersonDB.");
+                        Console.WriteLine("Please try again");
+                        Console.WriteLine("********************************");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Person details: ");
+                        Console.WriteLine();
+                    }
 
                     foreach (var person in queryString)
                     {
