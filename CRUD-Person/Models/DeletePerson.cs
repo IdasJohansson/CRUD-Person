@@ -21,16 +21,12 @@ namespace CRUD_Person.Models
             }
             catch (Exception e)
             {
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine(e.Message);
-                Console.WriteLine("Something went wrong when deleting this Person, please try again");
-                Console.ResetColor();
+                Helper redText = new Helper();
+                redText.TextColor(e.Message);
+                redText.TextColor("Something went wrong when deleting this Person, please try again");
             }
-            Console.WriteLine();
-            Console.WriteLine("------------------------------");
-            Console.WriteLine("Press a key to return to Menu");
-            Console.ReadKey();
-            Console.Clear();
+            Helper message = new Helper();
+            message.ReturnMenuMessage();
         }
 
         //public void Delete()

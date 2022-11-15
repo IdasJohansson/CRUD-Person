@@ -20,15 +20,15 @@ namespace CRUD_Person.Models
                 {
                     var queryString = dbContext.Person.FromSqlRaw($"SELECT Id,FirstName, LastName, Email, PhoneNr FROM Person where Id = {id}").ToList();
 
-                    // If statement check if th
+                    // If statement check if something is stored in the querystring List
                     if (queryString.Count == 0)
                     {
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("********************************");
-                        Console.WriteLine($"Person with id: {id} does not exist in PersonDB.");
-                        Console.WriteLine("Please try again");
-                        Console.WriteLine("********************************");
-                        Console.ResetColor();
+                        Helper helper = new Helper();
+                        helper.TextColor(@$"********************************
+Person with id: {id} does not exist in PersonDB.
+Please try again
+********************************
+"); 
                     }
                     else
                     {
@@ -48,16 +48,12 @@ namespace CRUD_Person.Models
             }
             catch (Exception e)
             {
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine(e.Message);
-                Console.WriteLine("Something went wrong when Reading Person, please try again");
-                Console.ResetColor();
+                Helper redText = new Helper();
+                redText.TextColor(e.Message);
+                redText.TextColor("Something went wrong when Reading Person, please try again"); 
             }
-            Console.WriteLine();
-            Console.WriteLine("------------------------------");
-            Console.WriteLine("Press a key to return to Menu");
-            Console.ReadKey();
-            Console.Clear();
+            Helper message = new Helper();
+            message.ReturnMenuMessage();
         }
 
         public void GetAllPersons()
@@ -94,11 +90,8 @@ namespace CRUD_Person.Models
                 Console.WriteLine("Something went wrong when Reading Persons, please try again");
                 Console.ResetColor();
             }
-            Console.WriteLine();
-            Console.WriteLine("------------------------------");
-            Console.WriteLine("Press a key to return to Menu");
-            Console.ReadKey();
-            Console.Clear();
+            Helper message = new Helper();
+            message.ReturnMenuMessage(); 
         }
     }
 
